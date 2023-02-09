@@ -1,5 +1,5 @@
 # SPDX-License-Identifier: GPL-2.0
-# scripts/dtc makefile
+# scripts/dtc makefilehttps://github.com/940842546/Xiaomi_Kernel_OpenSource/blob/cmi-r-oss/scripts/dtc/Makefile
 
 hostprogs-y	:= dtc
 ifeq ($(DTC_EXT),)
@@ -19,3 +19,5 @@ HOSTCFLAGS_dtc-parser.tab.o := -I$(src)
 
 # dependencies on generated files need to be listed explicitly
 $(obj)/dtc-lexer.lex.o: $(obj)/dtc-parser.tab.h
+targets		:= $(generated-files)
+clean-files	:= $(generated-files)
