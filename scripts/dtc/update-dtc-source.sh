@@ -54,10 +54,6 @@ dtc_log=$(git log --oneline ${last_dtc_ver}..)
 
 # Copy the files into the Linux tree
 cd $DTC_LINUX_PATH
-for f in $DTC_SOURCE; do
-	cp ${DTC_UPSTREAM_PATH}/${f} ${f}
-	git add ${f}
-done
 for f in $LIBFDT_SOURCE; do
        cp ${DTC_UPSTREAM_PATH}/libfdt/${f} libfdt/${f}
        git add libfdt/${f}
